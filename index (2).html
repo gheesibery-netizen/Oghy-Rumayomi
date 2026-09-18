@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oghy Rumayomi | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(20, 20, 20, 0.94);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo span {
+            color: #e31e24;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-menu a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #e31e24;
+        }
+
+        .menu-button {
+            display: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+
+            margin-top: 65px;
+
+            background-image:
+                linear-gradient(
+                    rgba(15, 15, 15, 0.78),
+                    rgba(15, 15, 15, 0.72)
+                ),
+                url("kampus.png");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .profile {
+            width: 220px;
+            height: 220px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+            overflow: hidden;
+
+            border: 5px solid white;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-text small {
+            font-size: 15px;
+            color: #ddd;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .hero-text h1 span {
+            color: #e31e24;
+        }
+
+        .hero-text h2 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            max-width: 650px;
+            color: #ddd;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 11px 20px;
+            border-radius: 4px;
+
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #e31e24;
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 70px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .title {
+            margin-bottom: 35px;
+        }
+
+        .title h2 {
+            font-size: 28px;
+            color: #222;
+        }
+
+        .title h2::after {
+            content: "";
+            display: block;
+
+            width: 45px;
+            height: 3px;
+
+            background: #e31e24;
+            margin-top: 8px;
+        }
+
+        .title p {
+            margin-top: 8px;
+            color: #777;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .biodata {
+            background: #f7f7f7;
+            padding: 25px;
+            border-left: 3px solid #e31e24;
+        }
+
+        .biodata div {
+            display: flex;
+            margin-bottom: 13px;
+            font-size: 13px;
+        }
+
+        .biodata strong {
+            width: 130px;
+        }
+
+        .biodata span {
+            color: #666;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            background: #f5f5f5;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #e31e24;
+            transform: translateY(-3px);
+        }
+
+        .skill i {
+            font-size: 30px;
+            margin-bottom: 12px;
+            color: #e31e24;
+        }
+
+        .skill h3 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .skill p {
+            color: #888;
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           PROJECT
+        ========================= */
+
+        .projects {
+            background: white;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            border: 1px solid #e5e5e5;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .project-top {
+            height: 130px;
+            background: #222;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-top i {
+            color: white;
+            font-size: 45px;
+        }
+
+        .project-body {
+            padding: 20px;
+        }
+
+        .project-body h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .project-body p {
+            color: #777;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .technology {
+            margin-top: 12px;
+            color: #e31e24;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           SOCIAL MEDIA
+        ========================= */
+
+        .contact {
+            background: #f5f5f5;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .social-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .social {
+            background: white;
+            padding: 18px;
+
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            border: 1px solid #e5e5e5;
+
+            transition: 0.3s;
+        }
+
+        .social:hover {
+            border-color: #e31e24;
+        }
+
+        .social i {
+            font-size: 22px;
+            color: #e31e24;
+        }
+
+        .social h4 {
+            font-size: 13px;
+        }
+
+        .social p {
+            color: #888;
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .contact-form {
+            background: white;
+            padding: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+
+            border: 1px solid #ddd;
+            padding: 11px;
+
+            font-family: inherit;
+            font-size: 12px;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #e31e24;
+        }
+
+        .form-group textarea {
+            height: 110px;
+            resize: vertical;
+        }
+
+        .send {
+            background: #e31e24;
+            color: white;
+
+            border: none;
+            padding: 11px 20px;
+
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #151515;
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 11px;
+        }
+
+        footer span {
+            color: #e31e24;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 850px) {
+
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 70px 0;
+            }
+
+            .profile {
+                width: 180px;
+                height: 180px;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .project-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width: 600px) {
+
+            .nav-menu {
+                display: none;
+
+                position: absolute;
+                top: 65px;
+                left: 0;
+
+                width: 100%;
+
+                background: #171717;
+
+                flex-direction: column;
+
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                text-align: center;
+                padding: 13px;
+                border-bottom: 1px solid #292929;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+
+            .hero-text h2 {
+                font-size: 18px;
+            }
+
+            .hero-text p {
+                font-size: 13px;
+            }
+
+            .skill-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .project-list {
+                grid-template-columns: 1fr;
+            }
+
+            .social-list {
+                grid-template-columns: 1fr;
+            }
+
+            .biodata div {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .biodata strong {
+                width: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#home" class="logo">
+            Oghy <span>Rumayomi</span>
+        </a>
+
+        <div class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+
+            <li>
+                <a href="#home">Beranda</a>
+            </li>
+
+            <li>
+                <a href="#about">Tentang Saya</a>
+            </li>
+
+            <li>
+                <a href="#skills">Keahlian</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projek</a>
+            </li>
+
+            <li>
+                <a href="#contact">Kontak</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div class="profile">
+
+            <img
+                src="foto-oghy.png"
+                alt="Foto Oghy Rumayomi"
+            >
+
+        </div>
+
+
+        <div class="hero-text">
+
+            <small>Selamat datang di portfolio saya</small>
+
+            <h1>
+                Oghy <span>Rumayomi</span>
+            </h1>
+
+            <h2>
+                Mahasiswa Teknik Informatika
+            </h2>
+
+            <p>
+                Saya adalah mahasiswa Teknik Informatika yang
+                tertarik pada pengembangan website dan pada bidang
+                 cyber security, pemrograman,
+                jaringan komputer, dan teknologi digital.
+                Saya terus belajar dan mengembangkan kemampuan
+                untuk menjadi seorang Full-Stack Developer.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    Lihat Projek
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Hubungi Saya
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TENTANG SAYA
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>Tentang Saya</h2>
+
+            <p>
+                Sedikit informasi tentang diri saya
+            </p>
+
+        </div>
+
+
+        <div class="about-content">
+
+
+            <div class="about-text">
+
+                <p>
+                    Nama saya <strong>Oghy Rumayomi</strong>.
+                    Saya merupakan mahasiswa Teknik Informatika
+                    Saya menempuh pendidikan di SMK Negeri 2 TIK Waropen
+                    dengan semangat untuk terus belajar dan mengembangkan 
+                    kemampuan di bidang teknologi. Saat menjalani PKL di Kantor Telkom Biak,
+                    saya mendapatkan pengalaman dan pengetahuan 
+                    yang semakin membuat saya tertarik pada dunia teknologi informasi. 
+                    Setelah menyelesaikan pendidikan SMK, saya melanjutkan kuliah di
+                    Politeknik Negeri Ujung Pandang dan mengambil jurusan Teknik Multimedia dan Jaringan. 
+                    Saya berasal dari keluarga yang sederhana, tetapi keadaan tersebut
+                    tidak menjadi halangan bagi saya untuk meraih cita-cita. Justru,
+                    kesederhanaan keluarga menjadi motivasi bagi saya untuk terus berusaha, 
+                    belajar, dan membuktikan bahwa dengan kerja keras dan semangat, 
+                    saya dapat meraih masa depan yang lebih baik.
+                </p>
+
+                <p>
+                    Saya memiliki minat dalam pengembangan website,
+                    pemrograman, database, jaringan komputer,siber 
+                    dan berbagai teknologi digital.
+                </p>
+
+                <p>
+                    Bagi saya, belajar teknologi bukan hanya
+                    tentang membuat program, tetapi juga tentang
+                    bagaimana teknologi dapat digunakan untuk
+                    menyelesaikan masalah.
+                </p>
+
+            </div>
+
+
+            <div class="biodata">
+
+                <div>
+                    <strong>Nama</strong>
+                    <span>Oghy Rumayomi</span>
+                </div>
+
+                <div>
+                    <strong>Program Studi</strong>
+                    <span>Teknik Informatika</span>
+                </div>
+
+                <div>
+                    <strong>Kampus</strong>
+                    <span>Politeknik Negeri Ujung Pandang</span>
+                </div>
+
+                <div>
+                    <strong>Asal</strong>
+                    <span>Waropen, Papua</span>
+                </div>
+
+                <div>
+                    <strong>Bidang Minat</strong>
+                    <span>Web & Jaringan</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KEAHLIAN
+========================= -->
+
+<section class="skills" id="skills">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>Keahlian</h2>
+
+            <p>
+                Beberapa teknologi yang sedang saya pelajari
+            </p>
+
+        </div>
+
+
+        <div class="skill-list">
+
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Web Programming</p>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-php"></i>
+                <h3>PHP</h3>
+                <p>Backend</p>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-laravel"></i>
+                <h3>Laravel</h3>
+                <p>Framework PHP</p>
+            </div>
+
+            <div class="skill">
+                <i class="fas fa-database"></i>
+                <h3>MySQL</h3>
+                <p>Database</p>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <i class="fas fa-network-wired"></i>
+                <h3>Jaringan</h3>
+                <p>Computer Network</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECT
+========================= -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>Projek Saya</h2>
+
+            <p>
+                Beberapa contoh projek yang saya kerjakan
+            </p>
+
+        </div>
+
+
+        <div class="project-list">
+
+
+            <div class="project">
+
+                <div class="project-top">
+                    <i class="fas fa-globe"></i>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        Website portfolio pribadi untuk
+                        menampilkan profil, keahlian,
+                        projek, dan kontak.
+                    </p>
+
+                    <div class="technology">
+                        HTML • CSS • JavaScript
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-top">
+                    <i class="fas fa-book"></i>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>Digital Library</h3>
+
+                    <p>
+                        Konsep aplikasi perpustakaan digital
+                        untuk mengelola data buku dan pengguna.
+                    </p>
+
+                    <div class="technology">
+                        Laravel • PHP • MySQL
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-top">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+
+                <div class="project-body">
+
+                    <h3>Network Monitoring</h3>
+
+                    <p>
+                        Konsep dashboard untuk memonitor
+                        koneksi dan perangkat jaringan.
+                    </p>
+
+                    <div class="technology">
+                        PHP • Network • Database
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KONTAK
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="title">
+
+            <h2>Hubungi Saya</h2>
+
+            <p>
+                Silakan terhubung dengan saya melalui media sosial
+            </p>
+
+        </div>
+
+
+        <div class="contact-content">
+
+
+            <div>
+
+                <div class="social-list">
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="https://www.instagram.com/oghhee728?stkn=MTBpeW42Y25ueXhpeA=="
+                        target="_blank"
+                        class="social"
+                    >
+
+                        <i class="fab fa-instagram"></i>
+
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>Follow saya</p>
+                        </div>
+
+                    </a>
+
+
+                    <!-- GITHUB -->
+
+                    <a
+                        href="https://github.com/gheesibery-netizen"
+                        target="_blank"
+                        class="social"
+                    >
+
+                        <i class="fab fa-github"></i>
+
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>Lihat projek saya</p>
+                        </div>
+
+                    </a>
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="oghejho357@gmail.com"
+                        class="social"
+                    >
+
+                        <i class="fas fa-envelope"></i>
+
+                        <div>
+                            <h4>Email</h4>
+                            <p>Kirim email</p>
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="contact-form">
+
+                <form onsubmit="kirimPesan(event)">
+
+                    <div class="form-group">
+
+                        <label>Nama</label>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            placeholder="Masukkan nama"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Masukkan email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Pesan</label>
+
+                        <textarea
+                            id="pesan"
+                            placeholder="Tulis pesan Anda..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button class="send" type="submit">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                        Kirim Pesan
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © <span id="tahun"></span>
+        Oghy Rumayomi.
+        Dibuat untuk portfolio pribadi.
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* MENU HP */
+
+    function toggleMenu() {
+
+        const menu =
+            document.getElementById("navMenu");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    /* TAHUN OTOMATIS */
+
+    document.getElementById("tahun").textContent =
+        new Date().getFullYear();
+
+
+    /* FORM WHATSAPP */
+
+    function kirimPesan(event) {
+
+        event.preventDefault();
+
+        const nama =
+            document.getElementById("nama").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const pesan =
+            document.getElementById("pesan").value;
+
+
+        /*
+           GANTI NOMOR DI BAWAH
+           Contoh:
+           6282393632514
+        */
+
+        const nomor =
+            "NOMOR_WHATSAPP_ANDA";
+
+
+        const text =
+            "Halo Oghy, saya " +
+            nama +
+            ".%0A%0AEmail: " +
+            email +
+            "%0A%0APesan: " +
+            pesan;
+
+
+        window.open(
+            "https://wa.me/" +
+            nomor +
+            "?text=" +
+            text,
+            "_blank"
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
